@@ -1,0 +1,32 @@
+{
+  "name": "@intelena/shielded-notes",
+  "version": "0.1.0",
+  "description": "Reference model for Intelena's shielded pool: notes, commitments, nullifiers, incremental Merkle tree and spend witness checks.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.8.0"
+  },
+  "keywords": ["privacy", "shielded-pool", "notes", "nullifier", "merkle", "zk", "intelena"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intelena/shielded-notes",
+    "directory": "packages/core"
+  }
+}

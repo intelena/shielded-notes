@@ -1,0 +1,1 @@
+{ "name": "shielded-notes-examples", "private": true, "type": "module", "dependencies": { "@intelena/shielded-notes": "workspace:*" } }
