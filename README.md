@@ -60,6 +60,10 @@ Every rejection reason (`UNKNOWN_ROOT`, `NULLIFIER_SPENT`, `INVALID_MERKLE_PROOF
 - double spend, non-owner spend, value inflation, asset swap and unknown root are rejected
 - historical roots (last N) remain spendable; older ones do not
 
+## Where this runs
+
+The pool targets **Robinhood Chain** (chain id `4663`, an Arbitrum Orbit rollup). Assets are `ETH`, `USDG` (6 decimals) and Robinhood stock tokens by plain ticker (`TSLA`, `NVDA`, `AAPL`, `MSFT`, `AMZN`, `GOOGL`, `META`, `COIN`, `SPY`, `QQQ`, 18 decimals). The [dapp](https://dapp.intelena.app) already reads these on-chain (Chainlink midpoints, Uniswap v3 quotes, wallet balances) and executes public Uniswap swaps; the pool contracts modelled here are the part still labelled *simulation* in the app.
+
 ## Related
 
 - [`intelena/association-set`](https://github.com/intelena/association-set) — proof of innocence over deposit commitments
